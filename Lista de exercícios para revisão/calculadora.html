@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle Financeiro</title>
+</head>
+<body>
+
+  <h2>Controle Financeiro Mensal</h2>
+
+  <label>Salário:</label><br>
+  <input type="number" id="salario"><br><br>
+
+  <label>Aluguel:</label><br>
+  <input type="number" id="aluguel"><br><br>
+
+  <label>Alimentação:</label><br>
+  <input type="number" id="alimentacao"><br><br>
+
+  <label>Lazer:</label><br>
+  <input type="number" id="lazer"><br><br>
+
+  <button onclick="calcularSaldo()">Calcular</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function calcularSaldo() {
+      let salario = parseFloat(document.getElementById("salario").value);
+      let aluguel = parseFloat(document.getElementById("aluguel").value);
+      let alimentacao = parseFloat(document.getElementById("alimentacao").value);
+      let lazer = parseFloat(document.getElementById("lazer").value);
+
+      let despesas = aluguel + alimentacao + lazer;
+      let saldo = salario - despesas;
+
+      let resultado = document.getElementById("resultado");
+
+      if (saldo > 0) {
+        resultado.innerText = "Saldo Positivo";
+      } else if (saldo === 0) {
+        resultado.innerText = "No Limite";
+      } else {
+        resultado.innerText = "Saldo Negativo";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Dias Simples</title>
+</head>
+<body>
+    <h1>Contador de Dias</h1>
+    
+    <p><strong>Hoje é:</strong> <span id="hoje"></span></p>
+    
+    <h2>Informe a data do seu compromisso:</h2>
+    
+    <input type="date" id="dataCompromisso">
+    <button onclick="calcular()">Calcular Dias</button>
+    
+    <h3 id="resultado"></h3>
+    
+    <script>
+        const hojeElemento = document.getElementById('hoje');
+        const hoje = new Date();
+        hojeElemento.textContent = hoje.toLocaleDateString('pt-BR');
+        
+        function calcular() {
+            const dataHoje = new Date();
+            const dataEvento = new Date(document.getElementById('dataCompromisso').value);
+            
+            if (!document.getElementById('dataCompromisso').value) {
+                document.getElementById('resultado').textContent = "Por favor, selecione uma data!";
+                return;
+            }
+            
+            const diferencaMs = dataEvento.getTime() - dataHoje.getTime();
+            
+            const umDiaMs = 24 * 60 * 60 * 1000;
+            const dias = diferencaMs / umDiaMs;
+            const diasArredondados = Math.ceil(dias);
+            const resultado = document.getElementById('resultado');
+            
+            if (diasArredondados < 0) {
+                resultado.textContent = "Esta data já passou!";
+            } else if (diasArredondados === 0) {
+                resultado.textContent = "Seu compromisso é hoje!";
+            } else {
+                resultado.textContent = `Faltam ${diasArredondados} dias para o seu compromisso!`;
+            }
+        }
+        
+        document.getElementById('dataCompromisso').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calcular();
+            }
+        });
+    </script>
+</body>
+</html>

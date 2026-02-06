@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda de Tarefas</title>
+</head>
+<body>
+
+  <h2>Agenda de Tarefas</h2>
+
+  <label>Hora (0 a 23):</label><br>
+  <input type="number" id="hora"><br><br>
+
+  <label>Prioridade (1 a 10):</label><br>
+  <input type="number" id="prioridade"><br><br>
+
+  <button onclick="verificarTarefa()">Verificar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function verificarTarefa() {
+      let hora = parseInt(document.getElementById("hora").value);
+      let prioridade = parseInt(document.getElementById("prioridade").value);
+      let resultado = document.getElementById("resultado");
+
+      
+      if (hora < 0 || hora > 23) {
+        resultado.innerText = "Horário Inválido";
+      }
+     
+      else if (prioridade < 1 || prioridade > 10) {
+        resultado.innerText = "Nível de Prioridade Inválida";
+      }
+      else {
+        let turno = "";
+
+        
+        if (hora >= 0 && hora <= 11) {
+          turno = "Manhã";
+        } else if (hora >= 12 && hora <= 17) {
+          turno = "Tarde";
+        } else {
+          turno = "Noite";
+        }
+
+        // Regras
+        if (turno === "Noite") {
+          resultado.innerText = "TAREFA NÃO IMPORTANTE";
+        }
+        else if (prioridade > 8 && (turno === "Manhã" || turno === "Tarde")) {
+          resultado.innerText = "TAREFA CRÍTICA/URGENTE";
+        }
+        else if (prioridade >= 7 && prioridade < 9 && (turno === "Manhã" || turno === "Tarde")) {
+          resultado.innerText = "TAREFA IMPORTANTE";
+        }
+        else {
+          resultado.innerText = "Tarefa comum";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Limpar Nome de Contato</title>
+</head>
+<body>
+
+  <h2>Formatar Nome de Contato</h2>
+
+  <label>Digite o nome:</label><br>
+  <input type="text" id="nome"><br><br>
+
+  <button onclick="processarNome()">Formatar</button>
+
+  <p id="resultado"></p>
+  <p id="quantidade"></p>
+
+  <script>
+    function limparNomeContato(nome) {
+      let nomeLimpo = nome.trim();
+
+      nomeLimpo = nomeLimpo.toUpperCase();
+
+      let palavras = nomeLimpo.split(" ");
+      let quantidadePalavras = palavras.length;
+
+      return {
+        nomeFormatado: nomeLimpo,
+        totalPalavras: quantidadePalavras
+      };
+    }
+
+    function processarNome() {
+      let nomeDigitado = document.getElementById("nome").value;
+
+      let resultado = limparNomeContato(nomeDigitado);
+
+      document.getElementById("resultado").innerText =
+        "Nome formatado: " + resultado.nomeFormatado;
+
+      document.getElementById("quantidade").innerText =
+        "Quantidade de palavras: " + resultado.totalPalavras;
+    }
+  </script>
+
+</body>
+</html>
