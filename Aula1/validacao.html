@@ -9,22 +9,16 @@
     <div id="resultados"></div>
     
     <script>
-        // 1. Array com os horários
         const agendaHorarios = [8, 12, 25, 15, -2, 20];
         
-        // Variável para contar horários válidos
         let contagemValidos = 0;
         
-        // Elemento para mostrar resultados
         const resultadosDiv = document.getElementById('resultados');
         
-        // 2. Percorrer o array
         for (let i = 0; i < agendaHorarios.length; i++) {
             const horario = agendaHorarios[i];
             
-            // 3. Verificar se o horário é válido
             if (horario >= 0 && horario <= 23) {
-                // Horário válido
                 resultadosDiv.innerHTML += `<p>✅ Compromisso agendado para as ${horario}h</p>`;
                 contagemValidos++; 
             } else {

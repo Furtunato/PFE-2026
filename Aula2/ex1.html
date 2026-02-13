@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        body {
+            transition: background-color 0.3s;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Conversor Celsius para Fahrenheit</h2>
+        <input type="number" id="celsius" placeholder="Digite a temperatura em °C">
+        <button onclick="converter()">Converter</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function converter() {
+            let celsius = document.getElementById('celsius').value;
+            
+            if (celsius === '') {
+                alert('Digite uma temperatura!');
+                return;
+            }
+            
+            let fahrenheit = (parseFloat(celsius) * 1.8) + 32;
+            document.getElementById('resultado').innerText = `${celsius}°C = ${fahrenheit.toFixed(1)}°F`;
+            
+            if (fahrenheit > 80) {
+                document.body.style.backgroundColor = 'coral';
+            } else {
+                document.body.style.backgroundColor = 'lightskyblue';
+            }
+        }
+    </script>
+</body>
+</html>
