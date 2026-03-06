@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </div>
+            
+            <div class="search-wrapper">
+                <input type="text" class="search-input" placeholder="Pesquisar">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            
+            <nav class="nav-icons">
+                <i class="fas fa-home"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <i class="far fa-user-circle"></i>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Estrutura Principal com CSS Grid -->
+    <div class="grid-container">
+        <!-- Feed de Publicações -->
+        <main class="feed">
+            <!-- Post 1 - Imagem -->
+            <article class="post">
+                <header class="post-header">
+                    <img src="https://www.look-beautiful.de/media/5c/fa/3c/1678381797/teaser-beauty-geheimnisse-aus-russland.jpg?ts=1694586584" alt="Foto de perfil de Sofia Mendes" class="profile-img">
+                    <div class="post-user-info">
+                        <span class="username">olga_irina</span>
+                        <span class="location">Moscou, Russia</span>
+                    </div>
+                </header>
+                
+                <div class="post-content">
+                    <img src="https://img.freepik.com/foto-premium/bella-donna-russa-in-una-sciarpa-in-inverno_548821-74002.jpg" alt="Paisagem montanhosa" class="post-media">
+                </div>
+                
+                <div class="post-actions">
+                    <div class="actions-left">
+                        <i class="far fa-heart action-icon"></i>
+                        <i class="far fa-comment action-icon"></i>
+                        <i class="far fa-paper-plane action-icon"></i>
+                    </div>
+                    <i class="far fa-bookmark action-icon"></i>
+                </div>
+                
+                <div class="post-stats">
+                    <span class="likes"><strong>1.234</strong> likes</span>
+                </div>
+                
+                <div class="post-caption">
+                    <span class="username">olga_irina</span>
+                    <span class="caption-text">Исследуем новые места! 🌍 #Путешествия</span>
+                </div>
+                
+                <div class="post-comments">
+                    <a href="#" class="view-comments">Ver todos os 12 comentários</a>
+                </div>
+                
+                <time class="post-time">HÁ 2 HORAS</time>
+            </article>
+
+            <!-- Post 2 - Vídeo (funcional) -->
+            <article class="post">
+                <header class="post-header">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfymfYqPpde8YLnoG-f8JQWfWkUlXBKtWFyg&s" alt="Foto de perfil de Miguel Santos" class="profile-img">
+                    <div class="post-user-info">
+                        <span class="username">neymarjr</span>
+                        <span class="location">Praia da Rocha, Algarve</span>
+                    </div>
+                </header>
+                
+                <div class="post-content">
+                    <img src="https://images.ctfassets.net/3mv54pzvptwz/7Jj4ryLGJazS8pDUlCK2Vg/07213977dcbbc3d402bac1e1a27c86af/54331642772_05fa9ffe6b_o_dentro.jpg" class="post-media">
+                </div>
+                
+                <div class="post-actions">
+                    <div class="actions-left">
+                        <i class="far fa-heart action-icon"></i>
+                        <i class="far fa-comment action-icon"></i>
+                        <i class="far fa-paper-plane action-icon"></i>
+                    </div>
+                    <i class="far fa-bookmark action-icon"></i>
+                </div>
+                
+                <div class="post-stats">
+                    <span class="likes"><strong>1M</strong> likes</span>
+                </div>
+                
+                <div class="post-caption">
+                    <span class="username">neymarjr</span>
+                    <span class="caption-text">HA HA HA 🃏</span>
+                </div>
+                
+                <div class="post-comments">
+                    <a href="#" class="view-comments">Ver todos os 25 comentários</a>
+                </div>
+                
+                <time class="post-time">HÁ 5 HORAS</time>
+            </article>
+
+            <!-- Post 3 - Imagem -->
+            <article class="post">
+                <header class="post-header">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150" alt="Foto de perfil de Ana Rodrigues" class="profile-img">
+                    <div class="post-user-info">
+                        <span class="username">ana_rodrigues</span>
+                        <span class="location">Porto, Portugal</span>
+                    </div>
+                </header>
+                
+                <div class="post-content">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800" alt="Fashion look do dia" class="post-media">
+                </div>
+                
+                <div class="post-actions">
+                    <div class="actions-left">
+                        <i class="far fa-heart action-icon"></i>
+                        <i class="far fa-comment action-icon"></i>
+                        <i class="far fa-paper-plane action-icon"></i>
+                    </div>
+                    <i class="far fa-bookmark action-icon"></i>
+                </div>
+                
+                <div class="post-stats">
+                    <span class="likes"><strong>892</strong> likes</span>
+                </div>
+                
+                <div class="post-caption">
+                    <span class="username">ana_rodrigues</span>
+                    <span class="caption-text">Look do dia! 👗✨ #moda #style</span>
+                </div>
+                
+                <div class="post-comments">
+                    <a href="#" class="view-comments">Ver todos os 8 comentários</a>
+                </div>
+                
+                <time class="post-time">HÁ 1 DIA</time>
+            </article>
+        </main>
+
+        <!-- Sidebar (apenas desktop) -->
+        <aside class="sidebar">
+            <!-- Perfil do usuário -->
+            <div class="profile-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/2025_Russia%E2%80%93United_States_summit_Vladimir_Putin_%28cropped%29.jpg" alt="Seu perfil" class="profile-img-large">
+                <div class="profile-info">
+                    <span class="username">putin</span>
+                    <span class="name">Vladmir Putin</span>
+                </div>
+            </div>
+
+            <!-- Sugestões -->
+            <div class="suggestions">
+                <div class="suggestions-header">
+                    <span>Sugestões para você</span>
+                    <a href="#">Ver tudo</a>
+                </div>
+                
+                <div class="suggestion-list">
+                    <div class="suggestion-item">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=150" alt="Perfil de carlos_tech">
+                        <div class="suggestion-info">
+                            <span class="username">carlos_tech</span>
+                            <span class="followed-by">Seguido por sofia_mendes</span>
+                        </div>
+                        <button class="follow-btn">Seguir</button>
+                    </div>
+                    
+                    <div class="suggestion-item">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150" alt="Perfil de maria_fotografia">
+                        <div class="suggestion-info">
+                            <span class="username">maria_fotografia</span>
+                            <span class="followed-by">Novo no Instagram</span>
+                        </div>
+                        <button class="follow-btn">Seguir</button>
+                    </div>
+                    
+                    <div class="suggestion-item">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150" alt="Perfil de joao_travel">
+                        <div class="suggestion-info">
+                            <span class="username">joao_travel</span>
+                            <span class="followed-by">Seguido por miguel_santos</span>
+                        </div>
+                        <button class="follow-btn">Seguir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Links úteis -->
+            <div class="footer-links">
+                <a href="#">Sobre</a> • <a href="#">Ajuda</a> • <a href="#">Imprensa</a> • 
+                <a href="#">API</a> • <a href="#">Carreiras</a> • <a href="#">Privacidade</a> • 
+                <a href="#">Termos</a> • <a href="#">Localizações</a> • <a href="#">Idioma</a>
+            </div>
+            
+            <div class="copyright">
+                © 2026 INSTAGRAM DO META
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

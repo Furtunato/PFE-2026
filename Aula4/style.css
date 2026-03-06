@@ -1,0 +1,63 @@
+@media screen and (min-width: 1201px)  {
+    img {
+        width: 290px;
+        height: 350px;
+    }
+
+    body {
+        background-color: red;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    img {
+        width: 200px;
+        height: 260px;
+    }
+
+    body {
+        background-color: rgb(157, 159, 179);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    img {
+        width: 150px;
+        height: 200px;
+    }
+
+    body {
+        background-color: rgb(0, 26, 255);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    img {
+        width: 120px;
+        height: 170px;
+    }
+
+   body {
+        background: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+        );
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img {
+        width: 100px;
+        height: 150px;
+    }
+
+    body {
+        background: linear-gradient(black, red);
+    };
+}
