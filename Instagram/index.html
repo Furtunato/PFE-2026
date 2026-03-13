@@ -11,7 +11,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Barra de Navegação -->
+    <!-- Barra Lateral Esquerda (Instagram Nova) -->
+    <aside class="left-sidebar">
+        <div class="left-sidebar-container">
+            <!-- Logo -->
+            <div class="left-sidebar-logo">
+                <i class="fab fa-instagram logo-icon"></i>
+                <span class="logo-text">Instagram</span>
+            </div>
+
+            <!-- Menu Principal -->
+            <nav class="left-sidebar-nav">
+                <!-- Página Inicial -->
+                <div class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-text">Página inicial</span>
+                </div>
+
+                <!-- Pesquisa -->
+                <div class="nav-item">
+                    <i class="fas fa-search"></i>
+                    <span class="nav-text">Pesquisa</span>
+                </div>
+
+                <!-- Explorar -->
+                <div class="nav-item">
+                    <i class="far fa-compass"></i>
+                    <span class="nav-text">Explorar</span>
+                </div>
+
+                <!-- Reels -->
+                <div class="nav-item">
+                    <i class="fas fa-film"></i>
+                    <span class="nav-text">Reels</span>
+                </div>
+
+                <!-- Mensagens -->
+                <div class="nav-item">
+                    <i class="far fa-paper-plane"></i>
+                    <span class="nav-text">Mensagens</span>
+                </div>
+
+                <!-- Notificações -->
+                <div class="nav-item">
+                    <i class="far fa-heart"></i>
+                    <span class="nav-text">Notificações</span>
+                </div>
+
+                <!-- Criar -->
+                <div class="nav-item">
+                    <i class="far fa-plus-square"></i>
+                    <span class="nav-text">Criar</span>
+                </div>
+
+                <!-- Perfil -->
+                <div class="nav-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/2025_Russia%E2%80%93United_States_summit_Vladimir_Putin_%28cropped%29.jpg" alt="Perfil" class="nav-profile-img">
+                    <span class="nav-text">Perfil</span>
+                </div>
+            </nav>
+
+            <!-- Mais opções (Threads) -->
+            <div class="left-sidebar-footer">
+                <div class="nav-item">
+                    <i class="fas fa-bars"></i>
+                    <span class="nav-text">Mais</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Barra de Navegação Superior (agora com z-index ajustado) -->
     <header class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -22,6 +92,22 @@
             <div class="search-wrapper">
                 <input type="text" class="search-input" placeholder="Pesquisar">
                 <i class="fas fa-search search-icon"></i>
+                <div class="search-results" style="display: none;">
+                    <div class="search-result-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfymfYqPpde8YLnoG-f8JQWfWkUlXBKtWFyg&s" alt="neymarjr">
+                        <div class="search-result-info">
+                            <span class="username">neymarjr</span>
+                            <span class="name">Neymar Jr</span>
+                        </div>
+                    </div>
+                    <div class="search-result-item">
+                        <img src="https://www.look-beautiful.de/media/5c/fa/3c/1678381797/teaser-beauty-geheimnisse-aus-russland.jpg?ts=1694586584" alt="olga_irina">
+                        <div class="search-result-info">
+                            <span class="username">olga_irina</span>
+                            <span class="name">Olga Irina</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <nav class="nav-icons">
@@ -33,18 +119,74 @@
         </div>
     </header>
 
-    <!-- Estrutura Principal com CSS Grid -->
-    <div class="grid-container">
+    <!-- Estrutura Principal com CSS Grid (ajustada para a nova sidebar) -->
+    <div class="main-container">
         <!-- Feed de Publicações -->
         <main class="feed">
-            <!-- Post 1 - Imagem -->
-            <article class="post">
+            <!-- Stories -->
+            <div class="stories-container">
+                <div class="stories-list">
+                    <div class="story-item">
+                        <div class="story-ring">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/2025_Russia%E2%80%93United_States_summit_Vladimir_Putin_%28cropped%29.jpg" alt="Seu story" class="story-img">
+                        </div>
+                        <span class="story-username">Seu story</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-ring seen-story">
+                            <img src="https://www.look-beautiful.de/media/5c/fa/3c/1678381797/teaser-beauty-geheimnisse-aus-russland.jpg?ts=1694586584" alt="olga_irina" class="story-img">
+                        </div>
+                        <span class="story-username">olga_irina</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-ring">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfymfYqPpde8YLnoG-f8JQWfWkUlXBKtWFyg&s" alt="neymarjr" class="story-img">
+                        </div>
+                        <span class="story-username">neymarjr</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-ring">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150" alt="ana_rodrigues" class="story-img">
+                        </div>
+                        <span class="story-username">ana_rodrigues</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-ring">
+                            <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="chefcarla" class="story-img">
+                        </div>
+                        <span class="story-username">chefcarla</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-ring">
+                            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=150" alt="carlos_tech" class="story-img">
+                        </div>
+                        <span class="story-username">carlos_tech</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-ring">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150" alt="maria_fotografia" class="story-img">
+                        </div>
+                        <span class="story-username">maria_foto</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-ring">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" alt="pedro_photo" class="story-img">
+                        </div>
+                        <span class="story-username">pedro_photo</span>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right stories-arrow"></i>
+            </div>
+
+            <!-- Post 1 - Olga Irina -->
+            <article class="post" data-post-id="1">
                 <header class="post-header">
-                    <img src="https://www.look-beautiful.de/media/5c/fa/3c/1678381797/teaser-beauty-geheimnisse-aus-russland.jpg?ts=1694586584" alt="Foto de perfil de Sofia Mendes" class="profile-img">
+                    <img src="https://www.look-beautiful.de/media/5c/fa/3c/1678381797/teaser-beauty-geheimnisse-aus-russland.jpg?ts=1694586584" alt="Foto de perfil" class="profile-img">
                     <div class="post-user-info">
                         <span class="username">olga_irina</span>
                         <span class="location">Moscou, Russia</span>
                     </div>
+                    <i class="fas fa-ellipsis-h post-options"></i>
                 </header>
                 
                 <div class="post-content">
@@ -53,15 +195,15 @@
                 
                 <div class="post-actions">
                     <div class="actions-left">
-                        <i class="far fa-heart action-icon"></i>
-                        <i class="far fa-comment action-icon"></i>
+                        <i class="far fa-heart action-icon like-btn"></i>
+                        <i class="far fa-comment action-icon comment-btn"></i>
                         <i class="far fa-paper-plane action-icon"></i>
                     </div>
-                    <i class="far fa-bookmark action-icon"></i>
+                    <i class="far fa-bookmark action-icon save-btn"></i>
                 </div>
                 
                 <div class="post-stats">
-                    <span class="likes"><strong>1.234</strong> likes</span>
+                    <span class="likes"><strong class="likes-count">1,234</strong> likes</span>
                 </div>
                 
                 <div class="post-caption">
@@ -70,20 +212,37 @@
                 </div>
                 
                 <div class="post-comments">
-                    <a href="#" class="view-comments">Ver todos os 12 comentários</a>
+                    <a href="#" class="view-comments">Ver todos os <span class="comments-count">12</span> comentários</a>
+                    <div class="comments-list">
+                        <div class="comment-item">
+                            <span class="comment-username">maria_fotografia</span>
+                            <span class="comment-text">Que lugar lindo! 😍</span>
+                        </div>
+                        <div class="comment-item">
+                            <span class="comment-username">joao_travel</span>
+                            <span class="comment-text">Já fui lá, é incrível!</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="add-comment">
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Adicione um comentário..." class="comment-input">
+                    <button class="post-btn">Publicar</button>
                 </div>
                 
                 <time class="post-time">HÁ 2 HORAS</time>
             </article>
 
-            <!-- Post 2 - Vídeo (funcional) -->
-            <article class="post">
+            <!-- Post 2 - Neymar Jr -->
+            <article class="post" data-post-id="2">
                 <header class="post-header">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfymfYqPpde8YLnoG-f8JQWfWkUlXBKtWFyg&s" alt="Foto de perfil de Miguel Santos" class="profile-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfymfYqPpde8YLnoG-f8JQWfWkUlXBKtWFyg&s" alt="Foto de perfil" class="profile-img">
                     <div class="post-user-info">
                         <span class="username">neymarjr</span>
-                        <span class="location">Praia da Rocha, Algarve</span>
+                        <span class="location">Paris, França</span>
                     </div>
+                    <i class="fas fa-ellipsis-h post-options"></i>
                 </header>
                 
                 <div class="post-content">
@@ -92,15 +251,15 @@
                 
                 <div class="post-actions">
                     <div class="actions-left">
-                        <i class="far fa-heart action-icon"></i>
-                        <i class="far fa-comment action-icon"></i>
+                        <i class="far fa-heart action-icon like-btn"></i>
+                        <i class="far fa-comment action-icon comment-btn"></i>
                         <i class="far fa-paper-plane action-icon"></i>
                     </div>
-                    <i class="far fa-bookmark action-icon"></i>
+                    <i class="far fa-bookmark action-icon save-btn"></i>
                 </div>
                 
                 <div class="post-stats">
-                    <span class="likes"><strong>1M</strong> likes</span>
+                    <span class="likes"><strong class="likes-count">1,000,000</strong> likes</span>
                 </div>
                 
                 <div class="post-caption">
@@ -109,20 +268,41 @@
                 </div>
                 
                 <div class="post-comments">
-                    <a href="#" class="view-comments">Ver todos os 25 comentários</a>
+                    <a href="#" class="view-comments">Ver todos os <span class="comments-count">25</span> comentários</a>
+                    <div class="comments-list">
+                        <div class="comment-item">
+                            <span class="comment-username">carlos_tech</span>
+                            <span class="comment-text">Melhor! 🔥</span>
+                        </div>
+                        <div class="comment-item">
+                            <span class="comment-username">ana_rodrigues</span>
+                            <span class="comment-text">Ídolo demais!</span>
+                        </div>
+                        <div class="comment-item">
+                            <span class="comment-username">pedro_photo</span>
+                            <span class="comment-text">Que momento! 📸</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="add-comment">
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Adicione um comentário..." class="comment-input">
+                    <button class="post-btn">Publicar</button>
                 </div>
                 
                 <time class="post-time">HÁ 5 HORAS</time>
             </article>
 
-            <!-- Post 3 - Imagem -->
-            <article class="post">
+            <!-- Post 3 - Ana Rodrigues -->
+            <article class="post" data-post-id="3">
                 <header class="post-header">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150" alt="Foto de perfil de Ana Rodrigues" class="profile-img">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150" alt="Foto de perfil" class="profile-img">
                     <div class="post-user-info">
                         <span class="username">ana_rodrigues</span>
                         <span class="location">Porto, Portugal</span>
                     </div>
+                    <i class="fas fa-ellipsis-h post-options"></i>
                 </header>
                 
                 <div class="post-content">
@@ -131,15 +311,15 @@
                 
                 <div class="post-actions">
                     <div class="actions-left">
-                        <i class="far fa-heart action-icon"></i>
-                        <i class="far fa-comment action-icon"></i>
+                        <i class="far fa-heart action-icon like-btn"></i>
+                        <i class="far fa-comment action-icon comment-btn"></i>
                         <i class="far fa-paper-plane action-icon"></i>
                     </div>
-                    <i class="far fa-bookmark action-icon"></i>
+                    <i class="far fa-bookmark action-icon save-btn"></i>
                 </div>
                 
                 <div class="post-stats">
-                    <span class="likes"><strong>892</strong> likes</span>
+                    <span class="likes"><strong class="likes-count">892</strong> likes</span>
                 </div>
                 
                 <div class="post-caption">
@@ -148,21 +328,129 @@
                 </div>
                 
                 <div class="post-comments">
-                    <a href="#" class="view-comments">Ver todos os 8 comentários</a>
+                    <a href="#" class="view-comments">Ver todos os <span class="comments-count">8</span> comentários</a>
+                    <div class="comments-list">
+                        <div class="comment-item">
+                            <span class="comment-username">maria_fotografia</span>
+                            <span class="comment-text">Amei o look! 😍</span>
+                        </div>
+                        <div class="comment-item">
+                            <span class="comment-username">chefcarla</span>
+                            <span class="comment-text">Super elegante!</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="add-comment">
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Adicione um comentário..." class="comment-input">
+                    <button class="post-btn">Publicar</button>
                 </div>
                 
                 <time class="post-time">HÁ 1 DIA</time>
             </article>
+
+            <!-- Post 4 - Chef Carla -->
+            <article class="post" data-post-id="4">
+                <header class="post-header">
+                    <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Foto de perfil da Chef Carla" class="profile-img">
+                    <div class="post-user-info">
+                        <span class="username">chefcarla</span>
+                        <span class="location">Lisboa, Portugal</span>
+                    </div>
+                    <i class="fas fa-ellipsis-h post-options"></i>
+                </header>
+                
+                <div class="post-content">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800" alt="Comida deliciosa" class="post-media">
+                </div>
+                
+                <div class="post-actions">
+                    <div class="actions-left">
+                        <i class="far fa-heart action-icon like-btn"></i>
+                        <i class="far fa-comment action-icon comment-btn"></i>
+                        <i class="far fa-paper-plane action-icon"></i>
+                    </div>
+                    <i class="far fa-bookmark action-icon save-btn"></i>
+                </div>
+                
+                <div class="post-stats">
+                    <span class="likes"><strong class="likes-count">2,345</strong> likes</span>
+                </div>
+                
+                <div class="post-caption">
+                    <span class="username">chefcarla</span>
+                    <span class="caption-text">Almoço de domingo perfeito! 🍝🥗 #comida #chef</span>
+                </div>
+                
+                <div class="post-comments">
+                    <a href="#" class="view-comments">Ver todos os <span class="comments-count">18</span> comentários</a>
+                    <div class="comments-list">
+                        <div class="comment-item">
+                            <span class="comment-username">ana_rodrigues</span>
+                            <span class="comment-text">Receita, por favor! 🙏</span>
+                        </div>
+                        <div class="comment-item">
+                            <span class="comment-username">joao_travel</span>
+                            <span class="comment-text">Que delícia!</span>
+                        </div>
+                        <div class="comment-item">
+                            <span class="comment-username">maria_fotografia</span>
+                            <span class="comment-text">Perfeito! 👨‍🍳</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="add-comment">
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Adicione um comentário..." class="comment-input">
+                    <button class="post-btn">Publicar</button>
+                </div>
+                
+                <time class="post-time">HÁ 2 DIAS</time>
+            </article>
         </main>
 
-        <!-- Sidebar (apenas desktop) -->
-        <aside class="sidebar">
+        <!-- Sidebar Direita (perfil e sugestões) -->
+        <aside class="right-sidebar">
             <!-- Perfil do usuário -->
             <div class="profile-card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/2025_Russia%E2%80%93United_States_summit_Vladimir_Putin_%28cropped%29.jpg" alt="Seu perfil" class="profile-img-large">
                 <div class="profile-info">
                     <span class="username">putin</span>
                     <span class="name">Vladmir Putin</span>
+                </div>
+                <a href="#" class="switch-account">Mudar</a>
+            </div>
+
+            <!-- Stories da Sidebar -->
+            <div class="sidebar-stories">
+                <div class="sidebar-stories-header">
+                    <span>Stories</span>
+                    <a href="#">Ver tudo</a>
+                </div>
+                <div class="sidebar-stories-list">
+                    <div class="sidebar-story-item">
+                        <img src="https://www.look-beautiful.de/media/5c/fa/3c/1678381797/teaser-beauty-geheimnisse-aus-russland.jpg?ts=1694586584" alt="olga_irina">
+                        <div class="sidebar-story-info">
+                            <span class="username">olga_irina</span>
+                            <span class="story-time">Há 1 hora</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-story-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfymfYqPpde8YLnoG-f8JQWfWkUlXBKtWFyg&s" alt="neymarjr">
+                        <div class="sidebar-story-info">
+                            <span class="username">neymarjr</span>
+                            <span class="story-time">Há 3 horas</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-story-item">
+                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="chefcarla">
+                        <div class="sidebar-story-info">
+                            <span class="username">chefcarla</span>
+                            <span class="story-time">Há 5 horas</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -174,40 +462,50 @@
                 </div>
                 
                 <div class="suggestion-list">
-                    <div class="suggestion-item">
-                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=150" alt="Perfil de carlos_tech">
+                    <div class="suggestion-item" data-suggestion-id="1">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=150" alt="Perfil">
                         <div class="suggestion-info">
                             <span class="username">carlos_tech</span>
-                            <span class="followed-by">Seguido por sofia_mendes</span>
+                            <span class="followed-by">Seguido por sofia_mendes + 5</span>
                         </div>
-                        <button class="follow-btn">Seguir</button>
+                        <button class="follow-btn follow-suggestion">Seguir</button>
                     </div>
                     
-                    <div class="suggestion-item">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150" alt="Perfil de maria_fotografia">
+                    <div class="suggestion-item" data-suggestion-id="2">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150" alt="Perfil">
                         <div class="suggestion-info">
                             <span class="username">maria_fotografia</span>
-                            <span class="followed-by">Novo no Instagram</span>
+                            <span class="followed-by">Seguido por ana_rodrigues</span>
                         </div>
-                        <button class="follow-btn">Seguir</button>
+                        <button class="follow-btn follow-suggestion">Seguir</button>
                     </div>
                     
-                    <div class="suggestion-item">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150" alt="Perfil de joao_travel">
+                    <div class="suggestion-item" data-suggestion-id="3">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150" alt="Perfil">
                         <div class="suggestion-info">
                             <span class="username">joao_travel</span>
-                            <span class="followed-by">Seguido por miguel_santos</span>
+                            <span class="followed-by">Seguido por miguel_santos + 3</span>
                         </div>
-                        <button class="follow-btn">Seguir</button>
+                        <button class="follow-btn follow-suggestion">Seguir</button>
+                    </div>
+                    
+                    <div class="suggestion-item" data-suggestion-id="4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" alt="Perfil">
+                        <div class="suggestion-info">
+                            <span class="username">pedro_photo</span>
+                            <span class="followed-by">Seguido por chefcarla</span>
+                        </div>
+                        <button class="follow-btn follow-suggestion">Seguir</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Links úteis -->
+            <!-- Footer -->
             <div class="footer-links">
                 <a href="#">Sobre</a> • <a href="#">Ajuda</a> • <a href="#">Imprensa</a> • 
                 <a href="#">API</a> • <a href="#">Carreiras</a> • <a href="#">Privacidade</a> • 
-                <a href="#">Termos</a> • <a href="#">Localizações</a> • <a href="#">Idioma</a>
+                <a href="#">Termos</a> • <a href="#">Localizações</a> • <a href="#">Idioma</a> •
+                <a href="#">Meta Verified</a>
             </div>
             
             <div class="copyright">
@@ -215,5 +513,275 @@
             </div>
         </aside>
     </div>
+
+    <!-- Modal de Comentários -->
+    <div class="comments-modal" id="commentsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Comentários</h3>
+                <i class="fas fa-times close-modal"></i>
+            </div>
+            <div class="modal-comments-list" id="modalCommentsList"></div>
+            <div class="modal-add-comment">
+                <i class="far fa-smile"></i>
+                <input type="text" id="modalCommentInput" placeholder="Adicione um comentário...">
+                <button id="modalPostBtn" class="post-btn">Publicar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dados dos usuários para comentários
+            const users = [
+                { name: 'maria_fotografia', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150' },
+                { name: 'joao_travel', img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150' },
+                { name: 'ana_rodrigues', img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150' },
+                { name: 'carlos_tech', img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=150' },
+                { name: 'pedro_photo', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150' },
+                { name: 'chefcarla', img: 'https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+                { name: 'sofia_mendes', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150' }
+            ];
+
+            // Comentários por post com diferentes usuários
+            const postComments = {
+                1: [
+                    { user: 'maria_fotografia', text: 'Que lugar lindo! 😍', time: '2h' },
+                    { user: 'joao_travel', text: 'Já fui lá, é incrível!', time: '1h' },
+                    { user: 'ana_rodrigues', text: 'Foto perfeita! 📸', time: '30m' }
+                ],
+                2: [
+                    { user: 'carlos_tech', text: 'Melhor! 🔥', time: '4h' },
+                    { user: 'ana_rodrigues', text: 'Ídolo demais!', time: '3h' },
+                    { user: 'pedro_photo', text: 'Que momento! 📸', time: '2h' },
+                    { user: 'sofia_mendes', text: 'HA HA HA 🃏', time: '1h' }
+                ],
+                3: [
+                    { user: 'maria_fotografia', text: 'Amei o look! 😍', time: '1d' },
+                    { user: 'chefcarla', text: 'Super elegante!', time: '1d' },
+                    { user: 'pedro_photo', text: 'Combinação perfeita', time: '23h' }
+                ],
+                4: [
+                    { user: 'ana_rodrigues', text: 'Receita, por favor! 🙏', time: '2d' },
+                    { user: 'joao_travel', text: 'Que delícia!', time: '2d' },
+                    { user: 'maria_fotografia', text: 'Perfeito! 👨‍🍳', time: '1d' },
+                    { user: 'sofia_mendes', text: 'Amei! Vou tentar fazer', time: '1d' }
+                ]
+            };
+
+            // Estado dos likes
+            const postLikes = {
+                1: 1234,
+                2: 1000000,
+                3: 892,
+                4: 2345
+            };
+
+            // FUNCIONALIDADE DE CURTIR
+            document.querySelectorAll('.like-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const post = this.closest('.post');
+                    const postId = post.dataset.postId;
+                    const likesCount = post.querySelector('.likes-count');
+                    
+                    if (this.classList.contains('fas')) {
+                        this.classList.remove('fas');
+                        this.classList.add('far');
+                        this.style.color = '';
+                        postLikes[postId]--;
+                        likesCount.textContent = postLikes[postId].toLocaleString();
+                        showNotification('Você descurtiu', 'info');
+                    } else {
+                        this.classList.remove('far');
+                        this.classList.add('fas');
+                        this.style.color = '#ed4956';
+                        postLikes[postId]++;
+                        likesCount.textContent = postLikes[postId].toLocaleString();
+                        this.style.transform = 'scale(1.3)';
+                        setTimeout(() => {
+                            this.style.transform = 'scale(1)';
+                        }, 200);
+                        showNotification('Você curtiu', 'success');
+                    }
+                });
+            });
+
+            // FUNCIONALIDADE DE SALVAR
+            document.querySelectorAll('.save-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (this.classList.contains('fas')) {
+                        this.classList.remove('fas');
+                        this.classList.add('far');
+                        showNotification('Removido dos salvos', 'info');
+                    } else {
+                        this.classList.remove('far');
+                        this.classList.add('fas');
+                        showNotification('Salvo com sucesso!', 'success');
+                    }
+                });
+            });
+
+            // FUNCIONALIDADE DE SEGUIR
+            document.querySelectorAll('.follow-suggestion').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const suggestionItem = this.closest('.suggestion-item');
+                    const username = suggestionItem.querySelector('.username').textContent;
+                    
+                    if (this.textContent === 'Seguir') {
+                        this.textContent = 'Seguindo';
+                        this.style.color = '#262626';
+                        showNotification(`Você começou a seguir ${username}`, 'success');
+                    } else {
+                        this.textContent = 'Seguir';
+                        this.style.color = '#0095f6';
+                        showNotification(`Você deixou de seguir ${username}`, 'info');
+                    }
+                });
+            });
+
+            // FUNCIONALIDADE DE COMENTÁRIOS
+            document.querySelectorAll('.comment-btn, .view-comments').forEach(element => {
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const post = this.closest('.post');
+                    const postId = post.dataset.postId;
+                    const modal = document.getElementById('commentsModal');
+                    const modalCommentsList = document.getElementById('modalCommentsList');
+                    
+                    modalCommentsList.innerHTML = '';
+                    if (postComments[postId]) {
+                        postComments[postId].forEach(comment => {
+                            const commentElement = document.createElement('div');
+                            commentElement.className = 'modal-comment';
+                            const user = users.find(u => u.name === comment.user) || users[0];
+                            
+                            commentElement.innerHTML = `
+                                <img src="${user.img}" alt="${comment.user}" class="comment-profile-img">
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <span class="comment-username">${comment.user}</span>
+                                        <span class="comment-time">${comment.time}</span>
+                                    </div>
+                                    <span class="comment-text">${comment.text}</span>
+                                </div>
+                                <i class="far fa-heart comment-like"></i>
+                            `;
+                            modalCommentsList.appendChild(commentElement);
+                        });
+                    }
+                    
+                    const modalInput = document.getElementById('modalCommentInput');
+                    const modalPostBtn = document.getElementById('modalPostBtn');
+                    
+                    modalPostBtn.onclick = function() {
+                        const commentText = modalInput.value.trim();
+                        if (commentText) {
+                            const commentElement = document.createElement('div');
+                            commentElement.className = 'modal-comment';
+                            commentElement.innerHTML = `
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/2025_Russia%E2%80%93United_States_summit_Vladimir_Putin_%28cropped%29.jpg" alt="você" class="comment-profile-img">
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <span class="comment-username">putin</span>
+                                        <span class="comment-time">agora</span>
+                                    </div>
+                                    <span class="comment-text">${commentText}</span>
+                                </div>
+                                <i class="far fa-heart comment-like"></i>
+                            `;
+                            modalCommentsList.appendChild(commentElement);
+                            
+                            const commentsCount = post.querySelector('.comments-count');
+                            const currentCount = parseInt(commentsCount.textContent);
+                            commentsCount.textContent = currentCount + 1;
+                            
+                            modalInput.value = '';
+                            showNotification('Comentário adicionado!', 'success');
+                        }
+                    };
+                    
+                    modal.style.display = 'flex';
+                });
+            });
+
+            // Fechar modal
+            document.querySelector('.close-modal').addEventListener('click', function() {
+                document.getElementById('commentsModal').style.display = 'none';
+            });
+
+            window.addEventListener('click', function(e) {
+                const modal = document.getElementById('commentsModal');
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Função de notificação
+            function showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                notification.textContent = message;
+                
+                const colors = {
+                    success: '#00c853',
+                    info: '#2196f3',
+                    warning: '#ff9800'
+                };
+                
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 80px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: ${colors[type]};
+                    color: white;
+                    padding: 12px 24px;
+                    border-radius: 8px;
+                    z-index: 2000;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                    animation: slideDown 0.3s ease;
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.animation = 'slideUp 0.3s ease';
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 2000);
+            }
+
+            // Adicionar animações
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideDown {
+                    from {
+                        top: 0;
+                        opacity: 0;
+                    }
+                    to {
+                        top: 80px;
+                        opacity: 1;
+                    }
+                }
+                
+                @keyframes slideUp {
+                    from {
+                        top: 80px;
+                        opacity: 1;
+                    }
+                    to {
+                        top: 0;
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
