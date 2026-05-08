@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.6s ease;
+}
+
+header h1 {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #fff 0%, #e0d4ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.1rem;
+}
+
+/* Formulário */
+.form-section {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 0.6s ease;
+}
+
+.form-section form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-section input {
+  flex: 2;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-section input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+}
+
+.form-section select {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-section select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-section button {
+  padding: 0 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102,126,234,0.4);
+}
+
+/* Busca */
+.search-section {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255,255,255,0.95);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+}
+
+/* Filtros */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-section button {
+  padding: 0.75rem 1.5rem;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.filter-section button:hover {
+  transform: translateY(-2px);
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.filter-section button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 5px 15px rgba(102,126,234,0.3);
+}
+
+/* Grid de tarefas */
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Card de tarefa */
+.task-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.task-card.baixa::before {
+  background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.task-card.média::before {
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+}
+
+.task-card.alta::before {
+  background: linear-gradient(135deg, #dc3545, #e74c3c);
+}
+
+.task-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.task-card.done {
+  opacity: 0.7;
+  background: #f8f9fa;
+}
+
+.task-card.done h3 {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+  word-break: break-word;
+}
+
+.priority-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0.75rem 0;
+}
+
+.priority-badge.alta {
+  background: linear-gradient(135deg, #ffe0e0, #ffc9c9);
+  color: #dc3545;
+}
+
+.priority-badge.média {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b3);
+  color: #ff9800;
+}
+
+.priority-badge.baixa {
+  background: linear-gradient(135deg, #e0ffe5, #c8f0d1);
+  color: #28a745;
+}
+
+.task-content small {
+  display: block;
+  color: #999;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+/* Botões de ação */
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.task-actions button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.task-actions button:first-child {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.task-actions button:first-child:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(102,126,234,0.3);
+}
+
+.task-actions button.edit {
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  color: white;
+}
+
+.task-actions button.edit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(255,193,7,0.3);
+}
+
+.task-actions button.delete {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.task-actions button.delete:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(220,53,69,0.3);
+}
+
+/* Modo de edição */
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.edit-mode input {
+  padding: 0.75rem;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.edit-mode input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+}
+
+.edit-mode button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.edit-mode button.save-edit {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.edit-mode button.cancel-edit {
+  background: linear-gradient(135deg, #6c757d, #5a6268);
+  color: white;
+}
+
+/* Estado sem tarefas */
+.no-tasks {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  color: #666;
+  font-size: 1.1rem;
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .form-section form {
+    flex-direction: column;
+  }
+  
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-section button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-actions {
+    flex-direction: column;
+  }
+  
+  .task-actions button {
+    width: 100%;
+  }
+}
